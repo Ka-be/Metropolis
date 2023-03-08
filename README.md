@@ -1,8 +1,5 @@
-# Project Title - [status]
+# Metropolis - Integration ![Status](https://img.shields.io/badge/Status-On%20going-fd9644?style=flat-square)
 
-![Status](https://img.shields.io/badge/Status-Not%20started-eb3b5a?style=flat-square)
-
-![Status](https://img.shields.io/badge/Status-On%20going-fd9644?style=flat-square)
 
 ![Status](https://img.shields.io/badge/Status-Finished-20bf6b?style=flat-square)
 
