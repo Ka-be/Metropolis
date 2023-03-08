@@ -23,6 +23,8 @@ h2 {
 
 h2 {
 	font-weight: 700;
+	opacity: 0;
+	animation: header 1.5s 1.8s ease-out forwards;
 }
 
 h1 {
@@ -30,6 +32,8 @@ h1 {
 	line-height: 30px;
 	color: transparent;
 	-webkit-text-stroke: 4px white;
+	opacity: 0;
+	animation: header 1.5s 2.5s ease-out forwards;
 }
 
 // COLLECTION IMAGES
@@ -47,8 +51,7 @@ h1 {
 	width: calc(100% / 3);
 
 	&:first-child {
-  
-		animation: upto 3.5s ease ;
+		animation: upto 3.5s ease;
 		content: "";
 		background-image: url(/assets/images/1.jpeg);
 		background-repeat: no-repeat;
@@ -56,8 +59,7 @@ h1 {
 	}
 
 	&:nth-child(2) {
-
-		animation: upto 2.5s ease  ;
+		animation: upto 2.5s ease;
 		content: "";
 		background-image: url(/assets/images/2.jpeg);
 		background-repeat: no-repeat;
@@ -65,7 +67,7 @@ h1 {
 	}
 
 	&:last-child {
-		animation: upto 3.5s ease  ;
+		animation: upto 3.5s ease;
 		content: "";
 		background-image: url(/assets/images/3.jpeg);
 		background-repeat: no-repeat;
@@ -77,15 +79,26 @@ h1 {
 	opacity: 0.7;
 }
 
-@keyframes upto {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
+//ANIMATIONS
+
+@keyframes header {
+	0% {
+		opacity: 0;
 	}
 
-  
-  100% {
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes upto {
+	0% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+
+	100% {
 		transform: translateY(0);
-    opacity: 1;
+		opacity: 1;
 	}
 }
