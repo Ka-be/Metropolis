@@ -61,7 +61,7 @@ h2 {
 h2 {
   font-weight: 700;
   opacity: 0;
-  animation: header 1.5s 1.8s ease-out forwards;
+  animation: uptoheader 1s 1.8s forwards;
 }
 
 h1 {
@@ -70,7 +70,7 @@ h1 {
   color: transparent;
   -webkit-text-stroke: 4px white;
   opacity: 0;
-  animation: header 1.5s 2.5s ease-out forwards;
+  animation: uptoheader 1s 2.5s forwards;
 }
 
 .collection {
@@ -119,11 +119,12 @@ h1 {
   transition: ease 0.5s;
 }
 
-@keyframes header {
+@keyframes uptoheader {
   0% {
-    opacity: 0;
+    transform: translateY(60%);
   }
   100% {
+    transform: translateY(0);
     opacity: 1;
   }
 }
