@@ -22,6 +22,8 @@ header {
 	width: 100%;
 	@include flex-column;
 	align-items: center;
+	justify-content: center;
+	height: 30vh;
 }
 
 h1,
@@ -68,7 +70,7 @@ h1 {
 		background-image: url(/assets/images/1.jpeg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: top;
 	}
 
 	&:nth-child(2) {
@@ -77,7 +79,7 @@ h1 {
 		background-image: url(/assets/images/2.jpeg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: top;
 	}
 
 	&:last-child {
@@ -86,7 +88,7 @@ h1 {
 		background-image: url(/assets/images/3.jpeg);
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-position: center;
+		background-position: top;
 	}
 }
 
@@ -122,6 +124,11 @@ h1 {
 
 // Tablets & mobile display
 @media screen and (max-width: 980px) {
+
+	header {
+		height: max-content;
+	}
+
 	.collection {
 		width: 100%;
 		overflow: hidden;
@@ -136,9 +143,5 @@ h1 {
 	.collection-img {
 		height: 100%;
 		width: 100%;
-
-		&:first-child, &:nth-child(2), &:last-child{
-			background-position: top;
-		}
 	}
 }
