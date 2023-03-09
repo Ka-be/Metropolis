@@ -144,17 +144,41 @@ h1 {
   }
   .collection {
     width: 100%;
-    overflow: hidden;
     position: absolute;
     bottom: 0;
     flex-direction: column;
     height: 80vh;
     justify-content: center;
-    background: red;
   }
   .collection-img {
     height: 100%;
     width: 100%;
+  }
+  .collection-img:first-child {
+    animation: fromleft 3.5s ease;
+  }
+  .collection-img:nth-child(2) {
+    animation: fromright 2.5s ease;
+  }
+  .collection-img:last-child {
+    animation: fromleft 3s ease;
+  }
+}
+@keyframes fromleft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes fromright {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 nav {
@@ -226,5 +250,10 @@ nav {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@media screen and (max-width: 980px) {
+  nav {
+    background: red;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -78,4 +78,8 @@ nav{
 
 
 // TABLET & MOBILE
-
+@media screen and (max-width: 980px) {
+  nav{
+    background: red;
+  }
+}
