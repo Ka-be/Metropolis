@@ -141,11 +141,10 @@ h1 {
   header {
     height: -moz-max-content;
     height: max-content;
+    position: relative;
+    top: 10vh;
   }
   .collection {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
     flex-direction: column;
     height: 80vh;
     justify-content: center;
@@ -153,6 +152,7 @@ h1 {
   .collection-img {
     height: 100%;
     width: 100%;
+    z-index: 1;
   }
   .collection-img:first-child {
     animation: fromleft 3.5s ease;
@@ -175,12 +175,36 @@ h1 {
 @keyframes fromright {
   0% {
     transform: translateX(100%);
-    opacity: 0;
   }
   100% {
     transform: translateY(0);
   }
 }
+.toggle {
+  display: none;
+}
+
+.logo {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: calc(50% - 100px);
+  text-transform: uppercase;
+  animation: nav 2.5s ease;
+}
+.logo span {
+  font-family: "DM Serif Display", serif;
+  width: 100%;
+  text-align: center;
+}
+.logo span:first-child {
+  font-size: 2.2em;
+  margin-bottom: -10px;
+}
+
 nav {
   display: flex;
   flex-direction: row;
@@ -206,25 +230,6 @@ nav {
 .menu ul li:hover {
   color: rgb(222, 203, 160);
   transition: ease 0.5s;
-}
-
-.logo {
-  width: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: calc(50% - 100px);
-}
-.logo span {
-  font-family: "DM Serif Display", serif;
-  width: 100%;
-  text-align: center;
-}
-.logo span:first-child {
-  font-size: 2.2em;
-  margin-bottom: -10px;
 }
 
 .buttons {
@@ -253,7 +258,67 @@ nav {
   }
 }
 @media screen and (max-width: 980px) {
+  .toggle {
+    position: absolute;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  .toggle svg {
+    width: 30px;
+    height: 30px;
+  }
+  .toggle .close {
+    display: none;
+  }
   nav {
-    background: red;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    animation: none;
+    flex-direction: column-reverse;
+    justify-content: center;
+    background: black;
+    transform: translateX(100%);
+    transition: all ease 1s;
+  }
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+  .logo {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 50px);
+    z-index: 3;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 150px;
+  }
+  .open_menu .burger {
+    display: none;
+  }
+  .open_menu .close {
+    display: block;
+  }
+  .open_menu nav {
+    transform: translateX(0);
+    transition: all ease 1s;
   }
 }/*# sourceMappingURL=style.css.map */
