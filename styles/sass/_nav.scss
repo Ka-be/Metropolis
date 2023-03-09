@@ -20,7 +20,7 @@ nav{
   }
 
   li:hover{
-    color: rgb(222, 203, 160);
+    color: $beige;
     transition: ease 0.5s;
   }
 }
@@ -75,3 +75,7 @@ nav{
 		opacity: 1;
 	}
 }
+
+
+// TABLET & MOBILE
+

@@ -32,6 +32,16 @@ body {
   width: 100%;
 }
 
+::-moz-selection {
+  color: black;
+  background-color: rgb(222, 203, 160);
+}
+
+::selection {
+  color: black;
+  background-color: rgb(222, 203, 160);
+}
+
 header {
   width: 100%;
   display: flex;
@@ -74,6 +84,8 @@ h1 {
 .collection-img {
   height: 60vh;
   width: 33.3333333333%;
+  cursor: pointer;
+  transition: ease 0.5s;
 }
 .collection-img:first-child {
   animation: upto 3.5s ease;
@@ -81,6 +93,7 @@ h1 {
   background-image: url(/assets/images/1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .collection-img:nth-child(2) {
   animation: upto 2.5s ease;
@@ -88,6 +101,7 @@ h1 {
   background-image: url(/assets/images/2.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .collection-img:last-child {
   animation: upto 3s ease;
@@ -95,10 +109,12 @@ h1 {
   background-image: url(/assets/images/3.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .collection-img:hover {
   opacity: 0.7;
+  transition: ease 0.5s;
 }
 
 @keyframes header {
@@ -117,6 +133,25 @@ h1 {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+@media screen and (max-width: 980px) {
+  .collection {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    height: 80vh;
+    justify-content: center;
+    background: red;
+  }
+  .collection-img {
+    height: 100%;
+    width: 100%;
+  }
+  .collection-img:first-child, .collection-img:nth-child(2), .collection-img:last-child {
+    background-position: top;
   }
 }
 nav {
