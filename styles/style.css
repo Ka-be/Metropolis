@@ -145,6 +145,9 @@ h1 {
     position: relative;
     top: 10vh;
   }
+  h1 {
+    -webkit-text-stroke: 2px white;
+  }
   .collection {
     flex-direction: column;
     height: 60vh;
@@ -282,7 +285,7 @@ nav {
     flex-direction: column-reverse;
     justify-content: center;
     background: black;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: all ease 1s;
   }
   .menu ul {
@@ -319,6 +322,7 @@ nav {
     display: block;
   }
   .open_menu nav {
+    display: flex;
     transform: translateX(0);
     transition: all ease 1s;
   }

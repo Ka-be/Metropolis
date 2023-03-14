@@ -45,7 +45,7 @@ h1 {
 	color: transparent;
 	-webkit-text-stroke: 4px white;
 	opacity: 0;
-	animation: uptoheader 1s 2.5s  forwards;
+	animation: uptoheader 1s 2.5s forwards;
 }
 
 // COLLECTION IMAGES
@@ -128,6 +128,10 @@ h1 {
 		height: max-content;
 		position: relative;
 		top: 10vh;
+	}
+
+	h1 {
+		-webkit-text-stroke: 2px white;
 	}
 
 	.collection {
