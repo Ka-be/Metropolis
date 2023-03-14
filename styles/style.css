@@ -84,7 +84,7 @@ h1 {
 }
 
 .collection-img {
-  height: 60vh;
+  height: 55vh;
   width: 33.3333333333%;
   cursor: pointer;
   transition: ease 0.5s;
@@ -147,7 +147,7 @@ h1 {
   }
   .collection {
     flex-direction: column;
-    height: 80vh;
+    height: 60vh;
     justify-content: center;
   }
   .collection-img {
